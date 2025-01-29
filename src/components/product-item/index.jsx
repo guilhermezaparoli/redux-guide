@@ -7,6 +7,7 @@ import CustomButton from "../custom-button/index";
 import * as Styles from "./styles";
 import { useDispatch } from "react-redux";
 import { addProductToCart } from "../../redux/cart/actions";
+import { addProduct } from "../../redux/cart/slice";
 
 // Utilities
 
@@ -15,8 +16,8 @@ const ProductItem = ({ product }) => {
 
 
   const handleProductClick = () => {
+    dispatch(addProduct(product))
     console.log('etrou')
-    dispatch(addProductToCart(product))
   }
 
   return (

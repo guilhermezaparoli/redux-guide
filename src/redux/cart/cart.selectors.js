@@ -5,3 +5,4 @@ export const selectProductsCount = (rootReducer) => {
 export const selectTotalPrice = (rootReducer) => {
     return rootReducer.cartReducer.products.reduce((acc, product) => acc + product.price * product.quantity, 0);
 }
+
